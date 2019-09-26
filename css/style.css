@@ -24,7 +24,7 @@ h1 {
 /** Rating and Replay Section **/
 
 .rating {
-    width: 500px;
+    width: 700px;
     margin-right: auto;
     margin-left: auto;
     display: flex;
@@ -34,7 +34,7 @@ h1 {
 }
 
 .rating p {
-   text-align: center;
+    text-align: center;
     display:inline-block;
 }
 
@@ -68,6 +68,7 @@ ion-icon, span.refresh {
     border-radius: 10px;
     box-shadow: 10px 10px 8px darkgray;
     margin-bottom: 20px;
+    
 }
 
 
@@ -104,6 +105,6 @@ ion-icon, span.refresh {
     background-color: rgb(57, 192, 245);
 }
 
-.fliiped_card  i {
+.fliiped_card i  {
     visibility: hidden; 
 }
