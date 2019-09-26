@@ -44,6 +44,7 @@ h1 {
 
 span.refresh {   
     font-size: 20px;
+    cursor: pointer;
 }
 
 ion-icon, span.refresh {
@@ -54,8 +55,8 @@ ion-icon, span.refresh {
 /** Cards Section **/
 
 .cards_container {
-    width: 600px;
-    height: 500px;;
+    width: 640px;
+    height: 540px;;
     background: linear-gradient(rgb(40, 204, 168),rgb(146, 213, 240), rgba(245, 136, 245, 0.548));
     margin-left: auto;
     margin-right: auto;
@@ -64,28 +65,45 @@ ion-icon, span.refresh {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-evenly;
-    border-radius: 12px;
+    border-radius: 10px;
     box-shadow: 10px 10px 8px darkgray;
     margin-bottom: 20px;
 }
 
+
+
 .card {
-    background-color: #444;
+    background-color: #2E3D49;
     width: 130px;
-    height: 110px;
+    height: 120px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.2s;
+    color: white;
+    font-size: 50px;
+    font-weight: 800;
+    cursor: pointer;
 }
 
-.false_highlighted {
+.card i {
+    padding-top: 30px;
+}
+
+/* Card Selection Colors */
+
+.false {
     background-color: darksalmon;
 }
 
-.true_highlighted {
+.true {
     background-color: lightgreen;
 }
 
-.card:hover {
-    
+.select {
+    visibility: default;
+    background-color: rgb(57, 192, 245);
+}
+
+.fliiped_card  i {
+    visibility: hidden; 
 }
