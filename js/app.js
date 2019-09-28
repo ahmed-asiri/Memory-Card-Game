@@ -62,6 +62,7 @@ function selection () {
             if (selection.startTimer === 0){
                 gameTimer();
                 selection.startTimer++;
+                correctSelection.counter = 0;
             }
             // the process for changing the cards from fliping cards to selected cards with blue highlithing.
             selectNum++;
@@ -105,7 +106,7 @@ function wrongSelection(array,selectNum) {
 
 function correctSelection(array, selectNum) {
     // when the guess right, the cards will change to green based on css classes.
-    correctSelection.counter = 0; // static variable to check if he win, he will win if the variable become = 8.
+     // static variable to check if he win, he will win if the variable become = 8.
     for (let index = 0; index < selectNum; index++) {
         let item = array.pop();
         item = item.parentElement;
@@ -114,11 +115,12 @@ function correctSelection(array, selectNum) {
     }
 
     correctSelection.counter++;
-
-    if(correctSelection.counter === 1){
+    console.log(correctSelection.counter);
+    if(correctSelection.counter === 8){
         let timer = setInterval(function(){
             // timer to slow down the pop-up wining message.
             winningMessage();
+            
             clearInterval(timer);
         },500);
         
@@ -233,6 +235,5 @@ function gameReplay() {
     
     
 }
-
 
 startGame();
