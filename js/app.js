@@ -139,6 +139,7 @@ function winningMessage() {
         text: "You have win the game\nTime: " + time + ", Moves: " + moves,
         icon: "success",
         buttons: ["No, thanks",'Play Again!'],
+        closeOnClickOutside: false
       });
     let playAgain = document.querySelector('.swal-button--confirm');
     playAgain.addEventListener('click', function(){
@@ -162,12 +163,10 @@ function starsGenerator(counter) {
     // this method take counter parameter from countMoves() function to perform rating process
     let array = document.querySelectorAll('.fa-star');
 
-    if (counter === 8){
+    if (counter === 12){
         whichStar(array, 2);
-    }else if (counter === 11){
+    }else if (counter === 18){
         whichStar(array, 1);
-    }else if (counter >= 16){
-        whichStar(array, 0);
     }else if (counter === 0){
         // to reset the start to default solid stars.
         document.querySelector('.counter').innerText = " " +0;
