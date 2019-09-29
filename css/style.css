@@ -19,6 +19,9 @@ h1 {
     font-weight: 100;
     text-align: center;
     margin-top: 30px;
+    width: 700;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /** Rating and Replay Section **/
@@ -31,6 +34,7 @@ h1 {
     flex-wrap: nowrap;
     justify-content: space-around;
     margin-top: 10px;
+    
 }
 
 .rating p {
@@ -38,8 +42,8 @@ h1 {
     display:inline-block;
 }
 
-.rating span {
-    margin-right: 10px;
+span.refresh {
+    margin-left: 8px;
 }
 
 span.refresh {   
@@ -47,17 +51,20 @@ span.refresh {
     cursor: pointer;
 }
 
-ion-icon, span.refresh {
-    vertical-align: text-top;
+span.timer, .moves {
+    font-size: 20px;
 }
 
+.fa-star {
+    vertical-align: text-top;
+}
 
 /** Cards Section **/
 
 .cards_container {
     width: 640px;
     height: 540px;;
-    background: linear-gradient(rgb(40, 204, 168),rgb(146, 213, 240), rgba(245, 136, 245, 0.548));
+    background: linear-gradient(#1AC1BD,rgb(146, 213, 240), #A581CD);
     margin-left: auto;
     margin-right: auto;
     margin-top: 8px;
@@ -75,8 +82,8 @@ ion-icon, span.refresh {
 
 .card {
     background-color: #2E3D49;
-    width: 130px;
-    height: 120px;
+    width: 22%;
+    height: 22%;
     text-align: center;
     border-radius: 8px;
     transition: background-color 0.2s;
@@ -84,6 +91,7 @@ ion-icon, span.refresh {
     font-size: 50px;
     font-weight: 800;
     cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgb(109, 109, 109);
 }
 
 .card i {
@@ -93,11 +101,11 @@ ion-icon, span.refresh {
 /* Card Selection Colors */
 
 .false {
-    background-color: darksalmon;
+    background-color: rgb(233, 111, 70);
 }
 
 .true {
-    background-color: lightgreen;
+    background-color:#02CCBA;
 }
 
 .select {
@@ -108,3 +116,84 @@ ion-icon, span.refresh {
 .fliiped_card i  {
     visibility: hidden; 
 }
+
+
+@media screen and (max-width: 1024px) {
+    
+    h1, .rating, .cards_container {
+        width: 90%;
+    }
+
+    .cards_container {
+        height: 90%;;
+    }
+
+    .card {
+        font-size: 100px;
+    }
+
+    .card i {
+        margin-top: 50px;
+    }
+    header {
+        font-size: 35px;
+    }
+    .rating span, .rating i, .rating p{
+        font-size: 35px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .card i {
+        margin-top: 15px;
+    }
+    header {
+        font-size: 25px;
+    }
+    .rating span, .rating i, .rating p{
+        font-size: 30px;
+    }
+  }
+
+
+@media screen and (max-width: 600px) {
+  h1, .rating, .cards_container{
+      width: 90%;
+  }
+  .cards_container{
+    height: 80%;;
+}
+.card {
+    font-size: 60px;
+}
+.card i {
+    margin-top: 15px;
+}
+}
+
+
+@media screen and (max-width: 450px) {
+    h1, .rating, .cards_container{
+        margin-top: 10px;
+        width: 100%;
+    }
+    .card {
+        height: 20%;
+        font-size: 40px;
+    }
+    body {
+        padding: 5px;
+    }
+    .cards_container {
+        justify-content: space-evenly;
+    }
+    header {
+        font-size: 18px;
+    }
+    .rating span, .rating i, .rating p{
+        font-size: 20px;
+    }   
+    .card i {
+        margin-top: 0.2rem;
+    }
+  }

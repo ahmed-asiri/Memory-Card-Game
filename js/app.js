@@ -16,6 +16,8 @@ function createLayout(){
         // inner loop that iterate to times, to create 2 divs and 2 icons holders and to put the two identical icons.
         for (let j = 0; j < 2; j++) {
             let card = document.createElement('div');
+            card.id = Math.random();
+            console.log(card.id);
             card.className = 'card fliiped_card';
             let icon = document.createElement('i');
             icon.className = iconsClassesArray[i];
@@ -57,10 +59,10 @@ function selection () {
     container.addEventListener('click', function(eve){
 
         // the last condition to check if the card is already have been selected as correct card.
-        if(eve.target.nodeName === 'DIV' && selectNum < 2 && eve.target.classList.contains('true') === false){
+        if(eve.target.nodeName === 'DIV' && selectNum < 2 && eve.target.classList.contains('true') === false && eve.target.classList.contains('select') === false){
             // to determine the first time the user select card to start the timer.
             if (selection.startTimer === 0){
-                gameTimer();
+                gameTimer()
                 selection.startTimer++;
                 correctSelection.counter = 0;
             }
